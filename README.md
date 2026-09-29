@@ -2,7 +2,7 @@
 
 Project website for **PhyLatent: Learning Dynamics-Relevant Representations for JEPA World Models**.
 
-[Project website](https://laplacetan.github.io/PhyLatent/) · [Read the paper](https://arxiv.org/abs/2608.05720) · [Code](https://github.com/Cherishings/PhyLatent) · [Models & checkpoints](https://github.com/Cherishings/PhyLatent#pretrained-checkpoints-and-planning) · [Download BibTeX](phylatent.bib)
+[Project website](https://phylatent.github.io/) · [Read the paper](https://arxiv.org/abs/2608.05720) · [Code](https://github.com/Cherishings/PhyLatent) · [Models & checkpoints](https://github.com/Cherishings/PhyLatent#pretrained-checkpoints-and-planning) · [Download BibTeX](phylatent.bib)
 
 This repository contains the static paper website. It uses HTML, CSS, and JavaScript, with figures and video demonstrations stored locally and links to the paper and official research repository. No build step, package installation, or backend is required.
 
@@ -29,9 +29,9 @@ The Models buttons link to the repository's [pretrained checkpoints and planning
 3. In **Settings → Pages**, select **Deploy from a branch**.
 4. Select **main** and **/(root)**, then save.
 
-For the `Laplacetan/PhyLatent` repository, GitHub Pages serves the website at `https://laplacetan.github.io/PhyLatent/` after deployment completes. Confirm the deployment status and published address in the repository's Pages settings.
+For the `PhyLatent/phylatent.github.io` repository, GitHub Pages serves the website at `https://phylatent.github.io/` after deployment completes. Confirm the deployment status and published address in the repository's Pages settings.
 
-Local assets use relative URLs, so the site supports GitHub Pages project paths. The `.nojekyll` file allows the files to be served directly without Jekyll processing.
+Local assets use relative URLs, so the site supports both organization root sites and GitHub Pages project paths. The `.nojekyll` file allows the files to be served directly without Jekyll processing.
 
 ## Preview and maintenance
 
