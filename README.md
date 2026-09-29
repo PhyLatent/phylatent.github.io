@@ -13,6 +13,7 @@ This repository contains the static paper website. It uses HTML, CSS, and JavaSc
 - Separate video demonstrations of physical invariance, physical distinguishability, and counterfactual dynamics collapse.
 - Nine consistently formatted experimental tables, with explanatory captions below each table.
 - Appearance robustness and goal separation results, individual task videos, and citation resources.
+- A flowing title gradient, staggered opening sequence, section reveals, and a reading-progress line. Decorative motion can be paused in the footer and respects the system's reduced-motion preference.
 
 Tables are reformatted for readability while preserving the reported values and their corresponding methods, tasks, and conditions. Figures and demonstrations retain the scientific meaning of the source material.
 
@@ -42,6 +43,7 @@ Serve this directory with any static HTTP server and open its local address in a
 | `index.html` | Paper information, scientific content, tables, and resource links |
 | `styles.css` | General styles and the opening sections |
 | `sections.css` | Diagnostics, results, resources, and responsive layouts |
+| `motion.css` | Opening animations, title motion, progress line, and motion controls |
 | `app.js` | Video behavior, section navigation, and citation copying |
 | `*.png`, `*.svg`, `*.jpg` | Figures and video preview images |
 | `*.mp4` | Task demonstrations and collapse diagnostics |
