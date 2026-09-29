@@ -6,3 +6,9 @@
 }
 @media (forced-colors:active){.project-name{background:none;color:CanvasText;-webkit-text-fill-color:currentColor}}
 @media print{.project-name{background:none;color:var(--navy);-webkit-text-fill-color:currentColor}}
+
+.nav-links a{position:relative;text-decoration:none}
+.nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--navy),var(--teal));opacity:0;transform:scaleX(.35);transition:transform .2s ease,opacity .2s ease}
+.nav-links a.active::after,.nav-links a:focus-visible::after{opacity:1;transform:scaleX(1)}
+@media(hover:hover) and (pointer:fine){.nav-links a:hover::after{opacity:1;transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.nav-links a::after{transition:none}.button:hover{transform:none}}

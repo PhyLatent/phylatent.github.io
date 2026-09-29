@@ -19,6 +19,24 @@
       "file": "collapse_examples.png",
       "description": "Observation examples of collapse in LeWM on Cube",
       "sha256": "af2cae4820d81efb6d8e13fb8a938fe57d90dde3856e9a0d6549527525598f9f"
+    },
+    {
+      "file": "four_tasks_overview.mp4",
+      "description": "Four-task planning overview, centered layout",
+      "sha256": "f082fb5cf912bc4690dfcba46d9ffaf70b2d23f9bd883b0f9b422934f19672ef",
+      "source": "https://github.com/Cherishings/PhyLatent/commit/63561ab47fec01697e11ec7c3386e0ee3e926eeb"
+    },
+    {
+      "file": "four_tasks_cover.jpg",
+      "description": "Official cover for the updated four-task overview",
+      "sha256": "f17b159464467eefe8e183abad74f8ed8e4926ed00c671e9a0ac8a4ff7910cdc",
+      "source": "https://github.com/Cherishings/PhyLatent/commit/63561ab47fec01697e11ec7c3386e0ee3e926eeb"
+    },
+    {
+      "file": "four-tasks-poster.jpg",
+      "description": "Poster extracted at 4 seconds from the updated four-task overview",
+      "sha256": "ceedb59b39c9246e135b022ccace72d621d89b6fb2323e1fc730289793c02d89",
+      "source": "https://github.com/Cherishings/PhyLatent/commit/63561ab47fec01697e11ec7c3386e0ee3e926eeb"
     }
   ]
 }

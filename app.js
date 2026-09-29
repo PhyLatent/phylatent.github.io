@@ -52,3 +52,40 @@ const sectionObserver = new IntersectionObserver(entries => {
   });
 }, { rootMargin: '-15% 0px -65% 0px' });
 navLinks.forEach(link => sectionObserver.observe(document.querySelector(link.getAttribute('href'))));
+
+// Keep content visible by default; animate only when it first enters the viewport.
+if (!reducedMotion && 'IntersectionObserver' in window && 'animate' in Element.prototype) {
+  const revealAnimations = new Set();
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      revealObserver.unobserve(entry.target);
+      if (entry.target.matches(':focus-within')) return;
+      const animation = entry.target.animate([
+        { opacity: 0, translate: '0 8px' },
+        { opacity: 1, translate: '0 0' }
+      ], { duration: 450, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+      revealAnimations.add(animation);
+      const cancelOnFocus = () => animation.cancel();
+      entry.target.addEventListener('focusin', cancelOnFocus);
+      animation.finished.catch(() => {}).finally(() => {
+        revealAnimations.delete(animation);
+        entry.target.removeEventListener('focusin', cancelOnFocus);
+      });
+    });
+  }, { threshold: 0 });
+
+  document.querySelectorAll('.section-heading, .principles article, .resource-grid > a').forEach(element => {
+    if (element.getBoundingClientRect().top >= window.innerHeight) revealObserver.observe(element);
+  });
+
+  const stopReveals = () => {
+    revealObserver.disconnect();
+    revealAnimations.forEach(animation => animation.cancel());
+    revealAnimations.clear();
+  };
+  window.addEventListener('beforeprint', stopReveals);
+  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', event => {
+    if (event.matches) stopReveals();
+  });
+}
